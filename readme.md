@@ -4,7 +4,7 @@ This is a menu bar app for Mac OS.
 
 ## How to run the app
 
-- Download the latest zip version
+- Download the latest zip version [from the latest release](https://github.com/Mercandj/mercamac/releases)
 - Unzip
 - Double click on the `mercamac.app` file
 
@@ -15,7 +15,7 @@ Copy past the following lines in a mac terminal
 ```shell
 git clone https://github.com/Mercandj/mercamac.git # Get the sources
 pushd mercamac # Change directory to the sources code
-xcodebuild -scheme mercamac build CONFIGURATION_BUILD_DIR=./build # 
+xcodebuild -scheme mercamac build CONFIGURATION_BUILD_DIR=./build -configuration Release # Build the app 
 popd mercamac
 cp ./mercamac/build/mercamac.app ./mercamac.app
 rm -rf ./mercamac/build
@@ -28,13 +28,23 @@ open ./mercamac.app
 - Type the following command
 - `git clone https://github.com/Mercandj/mercamac.git` 
 - `cd mercamac`
-- `xcodebuild -scheme mercamac build CONFIGURATION_BUILD_DIR=./build`
+- `xcodebuild -scheme mercamac build CONFIGURATION_BUILD_DIR=./build -configuration Release`
 - The app will be on `./build/mercamac.app`
 
 ## How to run the app
 
 - Follow steps `How to build the app`
 - Then, on finder, double click on the `mercamac.app` or via the terminal `open ./build/mercamac.app`
+
+## How to make a new release of this repository
+
+- Go to xcode and select the xcodeproj
+- Select the target `mercamac`
+- Bump version and build
+- Run `rm -rf ./build && xcodebuild -scheme mercamac build CONFIGURATION_BUILD_DIR=./build -configuration Release`
+- Make a github [release](https://github.com/Mercandj/mercamac/releases) with the `mercamac.app` and `mercamac.app.dSYM`
+
+## Thanks to
 
 This app is based on
 - the [Up&Down](https://github.com/gjiazhe/Up-Down) app version 1.1
