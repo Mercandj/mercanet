@@ -6,7 +6,7 @@
 
 ## 1. Description
 
-This is a menu bar app for Mac OS.
+This is a menu bar app for Mac OS. Monitor the download and upload speeds in `KB/s`, `MB/s`, `GB/s`.
 
 <a margin="20px 0 20px 40px" href="https://play.google.com/store/apps/details?id=com.mercandalli.android.browser">
 	<img 
@@ -39,8 +39,8 @@ This is a menu bar app for Mac OS.
 ### 2.b. If you do not trust the app developer
 
 - Read the code and the script
-- Be sure to have xode installed and `xcodebuild` available on your terminal
-- Copy past the following lines in a mac terminal
+- Be sure to have xcode installed and `xcodebuild` available on your terminal
+- Once you are confident, copy and paste the following lines in a mac terminal
 
 ```shell
 git clone https://github.com/Mercandj/mercanet.git # Get the sources
@@ -67,8 +67,9 @@ popd # Go back to original folder
 
 ## 4. Thanks to
 
-This app is based on
-
-- the [Up&Down](https://github.com/gjiazhe/Up-Down) app version 1.1
-- the command line
+- This is a recompilation of this app [Up&Down](https://github.com/gjiazhe/Up-Down) version 1.1.
+    - Change from swift 3.0 to 5.0
+    - Increase the refresh rate from 2s to 0.5s
+    - Remove the auto-restart feature
+- This app is based on the command line
   tool [nettop](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/nettop.1.html).
