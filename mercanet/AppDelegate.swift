@@ -50,7 +50,7 @@ extension AppDelegate {
         switch result {
         case NSApplication.ModalResponse.alertFirstButtonReturn:
             //open Github page
-            NSWorkspace.shared.open(URL(string: "https://github.com/Mercandj/mercamac")!)
+            NSWorkspace.shared.open(URL(string: "https://github.com/Mercandj/mercanet")!)
             break
         default:
             //close alert window
