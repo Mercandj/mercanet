@@ -38,23 +38,16 @@ This is a menu bar app for Mac OS.
 
 ### 2.b. If you do not trust the app developer
 
-- Read the code
+- Read the code and the script
 - Be sure to have xode installed and `xcodebuild` available on your terminal
 - Copy past the following lines in a mac terminal
 
 ```shell
-# Get source code
 git clone https://github.com/Mercandj/mercanet.git # Get the sources
-
-# Build the code
-pushd mercanet # Change directory to the sources code
-xcodebuild -scheme mercanet build CONFIGURATION_BUILD_DIR=./build -configuration Release # Build the app 
-popd # Go back to parent folder of mercanet folder 
-cp ./mercanet/build/mercanet.app ./mercanet.app # Get the executable
-rm -rf ./mercanet # Remove the project
-
-# Open the app 
-open ./mercanet.app # Open the app
+pushd mercanet # Change directory to mercanet
+chmod 755 ./run.sh # Grant permission to the script
+./run.sh # Run the script to compile and open the .app file
+popd # Go back to original folder
 ```
 
 ----
