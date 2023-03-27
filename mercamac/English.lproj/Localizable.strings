@@ -1,0 +1,5 @@
+"start" = "Start at login";
+"about" = "About";
+"quit" = "Quit";
+"close" = "Close";
+"about_content" = "Mercamac is an open-source Mac OS X app to monitor upload and download speeds.";

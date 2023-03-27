@@ -1,0 +1,36 @@
+# OSX files
+.DS_Store
+
+/build
+.build
+
+####################
+# Xcode
+*~.nib
+*.xccheckout
+*.xcscmblueprint
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+xcuserdata
+!xcshareddata
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+timeline.xctimeline
+playground.xcworkspace
+# Xcode
+####################
+
+Pods/
+
+# AppCode
+.idea
