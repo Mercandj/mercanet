@@ -2,17 +2,26 @@
 
 This is a menu bar app for Mac OS.
 
-## How run the app on my mac
+## How to run the app
+
+- Download the latest zip version
+- Unzip
+- Double click on the `mercamac.app` file
+
+## How to run the app on my mac from sources
 
 Copy past the following lines in a mac terminal
 
 ```shell
-git clone https://github.com/Mercandj/mercamac.git
-pushd mercamac
-xcodebuild -scheme mercamac build CONFIGURATION_BUILD_DIR=./build
-open ./build/mercamac.app
+git clone https://github.com/Mercandj/mercamac.git # Get the sources
+pushd mercamac # Change directory to the sources code
+xcodebuild -scheme mercamac build CONFIGURATION_BUILD_DIR=./build # 
 popd mercamac
+cp ./mercamac/build/mercamac.app ./mercamac.app
+rm -rf ./mercamac/build
+open ./mercamac.app
 ```
+
 ## How to build the app
 
 - On macos, open the terminal
