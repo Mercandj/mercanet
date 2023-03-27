@@ -38,18 +38,19 @@ This is a menu bar app for Mac OS.
 
 Read the code.
 
-#### How to run the app on my mac from sources
+### How to run the app on my mac from sources
 
-Copy past the following lines in a mac terminal
+- Be sure to have xode installed and `xcodebuild` available on your terminal
+- Copy past the following lines in a mac terminal
 
 ```shell
 git clone https://github.com/Mercandj/mercanet.git # Get the sources
 pushd mercanet # Change directory to the sources code
 xcodebuild -scheme mercanet build CONFIGURATION_BUILD_DIR=./build -configuration Release # Build the app 
-popd mercanet
-cp ./mercanet/build/mercanet.app ./mercanet.app
-rm -rf ./mercanet/build
-open ./mercanet.app
+popd # Go back to parent folder of mercanet folder 
+cp ./mercanet/build/mercanet.app ./mercanet.app # Get the executable
+rm -rf ./mercanet # Remove the project 
+open ./mercanet.app # Open the app
 ```
 
 #### How to build the app
@@ -71,17 +72,14 @@ open ./mercanet.app
 
 ## If you are me
 
-#### How to make a new release of this repository
+#### How to make a new release of this repos[publish.sh](publish.sh)itory
 
 - Go to xcode and select the xcodeproj
-- Select the target `mercanet[readme.md](readme.md)`
+- Select the target `mercanet[readme.md][publish.sh](publish.sh)(readme.md[publish.sh](publish.sh))`
 - Bump version and build
 - Bump this readme label
 - Commit `[Version] Bump to X.YY.ZZ`
--
-
-Run `rm -rf ./build && xcodebuild -scheme mercanet build CONFIGURATION_BUILD_DIR=./build -configuration Release && pushd ./build && zip -r ./mercanet.zip ./mercanet.app ./mercanet.app.dSYM && popd`
-
+- Run `./publish.sh`
 - Make a github [release](https://github.com/Mercandj/mercanet/releases) with
   the `./build/mercanet.zip`
 
